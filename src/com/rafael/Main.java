@@ -110,6 +110,54 @@ public class Main {
 //        } else {
 //            System.out.println("Seu voto é obrigatório");
 //        }
+//        int listInteiros[] = new int[3];
+//        int[] listInteiros = new int[3];
+//        System.out.println(Arrays.toString(listInteiros));
+//        char[] copyFrom = {'d', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n', 'a', 't', 'e', 'd'};
+//        char[] copyTo = Arrays.copyOfRange(copyFrom, 2, 9);
+//        System.out.println(copyTo);
+//        int[] listInteiros = new int[10];
+//        listInteiros[0] = 14;
+//        listInteiros[1] = 20;
+//        listInteiros[2] = 7;
+//        int[] newList = new int[0];
+//        for (int i = 0; i < listInteiros.length; i++) {
+//            if (listInteiros[i] > 0) {
+//                newList = Arrays.copyOfRange(listInteiros, 0, i + 1);
+//                System.out.println("O número na posição " + i + " do array é: " + listInteiros[i]);
+//            }
+//        }
+//        System.out.println(Arrays.toString(newList));
+//        boolean flag;
+//        Boolean outraFlag;
+//        double[] arrayDouble = new double[5];
+//        arrayDouble[0] = 5.0;
+//        arrayDouble[1] = 7.0;
+//        System.out.println(Arrays.toString(arrayDouble));
+//        String[] arrayString = new String[5];
+//        arrayString[0]= "Gabriela";
+//        System.out.println(Arrays.toString(arrayString));
+//          double[][] notasAlunos = new double[3][4];
+//        notasAlunos[0][0] = 8;
+//        notasAlunos[0][1] = 9;
+//        notasAlunos[0][2] = 10;
+//        notasAlunos[0][3] = 8;
+//        for (int i = 0; i < notasAlunos.length; i++) {
+//            for (int j=0; j < notasAlunos[i].length; j++) {
+//                if (notasAlunos[i][j] > 0.0) {
+//                    System.out.println(notasAlunos[i][j]);
+//                }
+//            }
+//        }
+//        Scanner sc = new Scanner(System.in);
+//        String[] dataString = new String[5];
+//        for (int i = 0; i < dataString.length; i++) {
+//            System.out.print("Digite nome do aluno: ");
+//            dataString[i] = sc.nextLine();
+//        }
+//        for (int i = 0; i < dataString.length; i++) {
+//            System.out.println(dataString[i]);
+//        }
     }
 
     private static float celsiusToFarenheit (float celsius) {
