@@ -5,6 +5,10 @@ package com.rafael;
 //import com.rafael.aula2.Avatar;
 //import com.rafael.aula2.MediaNotas;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Locale;
@@ -158,12 +162,61 @@ public class Main {
 //        for (int i = 0; i < dataString.length; i++) {
 //            System.out.println(dataString[i]);
 //        }
+        Vendedor vendedor = new Vendedor();
+        vendedor.nome = "Vendedor Joao";
+        vendedor.baterPonto();
+        Diretor diretor = new Diretor(1);
+        System.out.println(diretor.matricula);
+        diretor.nome = "Diretor Marcio";
+        diretor.baterPonto();
     }
 
     private static float celsiusToFarenheit (float celsius) {
         return (float) (celsius * 1.8 + 32);
     }
 }
+
+//class Vendedor implements Funcionario {
+//    //quantidade (quantidade não pode ser menor que 0)
+//    // implements significa que Vendedor é um Funcionario. Vendedor deve implememtar os métodos indicados pela interface Funcionario (como troca) com o decorator @Override
+//    @Override
+//    public boolean troca() {
+//        return false;
+//    }
+//}
+//interface Funcionario {
+//    boolean troca();
+//}
+
+//Herança:
+//Toda class já extends Object por default (Toda class tem um pai)
+@ToString
+@Setter
+@Getter
+class Funcionario {
+    long matricula;
+    String nome;
+    String cpf;
+    public void baterPonto() {
+        System.out.println(this.nome + " batendo ponto...");
+    }
+}
+class Vendedor extends Funcionario {
+    public void baterPonto() {
+        System.out.println(this.nome + " batendo ponto como vendedor...");
+    }
+}
+class Diretor extends Funcionario {
+    //Constructor: Torna obrigatório passar os argumentos do constructor para inicializar a class
+    public Diretor (long matricula) {
+        this.matricula = matricula;
+    }
+}
+
+// abstract class é um modelo de class que não pode ser instanciado diretamente
+//abstract class Funcionario {
+//
+//}
 
 enum DiasDaSemana {
     segunda, terca, quarta, quinta, sexta, sabado, domingo
